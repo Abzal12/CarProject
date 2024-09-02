@@ -2,17 +2,17 @@ package org.abzal1.model.car;
 
 import java.time.LocalDate;
 
-public class CarDTO {
+public class CarDto {
     private Long id;
     private Long userId;
-    private CarType carType;
+    private Type type;
     private String carClass;
     private LocalDate startDate;
 
-    public CarDTO(Long id, Long userId, CarType carType, String carClass, LocalDate startDate) {
+    public CarDto(Long id, Long userId, Type type, String carClass, LocalDate startDate) {
         this.id = id;
         this.userId = userId;
-        this.carType = carType;
+        this.type = type;
         this.carClass = carClass;
         this.startDate = startDate;
     }
@@ -33,12 +33,12 @@ public class CarDTO {
         this.userId = userId;
     }
 
-    public CarType getCarType() {
-        return carType;
+    public Type getCarType() {
+        return type;
     }
 
-    public void setCarType(CarType carType) {
-        this.carType = carType;
+    public void setCarType(Type type) {
+        this.type = type;
     }
 
     public String getCarClass() {

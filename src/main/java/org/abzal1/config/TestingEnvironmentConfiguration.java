@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class MyCustomConfiguration {
+public class TestingEnvironmentConfiguration {
 
     @Bean
     @ConditionalOnProperty(name = "myapp.custom-bean.enabled", havingValue = "true")

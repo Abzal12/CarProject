@@ -15,7 +15,7 @@ public class Car {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "car_type")
-    private CarType carType;
+    private Type type;
 
     @Column(name = "car_class")
     private String carClass;
@@ -30,6 +30,14 @@ public class Car {
     public Car() {
     }
 
+    public Car(Long id, Type type, String carClass, LocalDate startDate, User user) {
+        this.id = id;
+        this.type = type;
+        this.carClass = carClass;
+        this.startDate = startDate;
+        this.user = user;
+    }
+
     public Long getId() {
         return id;
     }
@@ -38,12 +46,12 @@ public class Car {
         this.id = id;
     }
 
-    public CarType getCarType() {
-        return carType;
+    public Type getType() {
+        return type;
     }
 
-    public void setCarType(CarType carType) {
-        this.carType = carType;
+    public void setType(Type type) {
+        this.type = type;
     }
 
     public String getCarClass() {
@@ -73,7 +81,7 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-                "carType=" + carType +
+                "carType=" + type +
                 ", carClass='" + carClass + '\'' +
                 ", startDate=" + startDate +
                 '}';

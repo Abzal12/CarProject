@@ -1,5 +1,5 @@
 package org.abzal1.model.car;
 
-public enum CarType {
+public enum Type {
     SEDAN, SPORT_UTILITY_VEHICLE, HATCHBACK, COUPE
 }

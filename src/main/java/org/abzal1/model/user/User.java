@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "users4")
+@Table(name = "users")
 public class User {
 
     @Id
@@ -25,6 +25,13 @@ public class User {
     private List<Car> cars = new ArrayList<>();
 
     public User() {
+    }
+
+    public User(Long id, String name, LocalDate startDate) {
+        this.id = id;
+        this.name = name;
+        this.startDate = startDate;
+        this.cars = null;
     }
 
     public Long getId() {
